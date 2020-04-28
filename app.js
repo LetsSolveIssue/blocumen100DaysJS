@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const morgan = require("morgan");
-const dotenv = require("dotenv");
+
 
 var session = require('express-session');
 
@@ -13,7 +13,7 @@ const cookieParser = require("cookie-parser");
 
 const path = require("path");
 
-dotenv.config();
+
 
 app.use(express.static(path.join(__dirname, "src")));
 
