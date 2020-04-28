@@ -20,11 +20,11 @@ module.exports = {
   
   },
   getUserRequest : async (req,res) => {
-      let urlParameters = JSON.stringify(req.params);
+      let urlParameters = req.params.name;
       if(urlParameters){
         res.status(200).json({
             status : true,
-            message :  `You have successfully submitted the get request with ${urlParameters}`
+            message :  `You have successfully submitted the get request with name ${urlParameters}`
         })
       }else{z
           res.json({
