@@ -3,8 +3,7 @@ const async = require("async");
 
 module.exports = {
   saveUserInfo : async (req,res) => {
-      console.log("getting into code");
-      console.log(req.body);
+     
       let data = req.body;
 
       if(data){
@@ -21,13 +20,13 @@ module.exports = {
   
   },
   getUserRequest : async (req,res) => {
-      let urlParameters = req.params;
+      let urlParameters = JSON.stringify(req.params);
       if(urlParameters){
         res.status(200).json({
             status : true,
             message :  `You have successfully submitted the get request with ${urlParameters}`
         })
-      }else{
+      }else{z
           res.json({
               status : false,
               message  : "Some error occured"
