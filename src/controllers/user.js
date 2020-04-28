@@ -3,7 +3,10 @@ const async = require("async");
 
 module.exports = {
   saveUserInfo : async (req,res) => {
+      console.log("getting into code");
+      console.log(req.body);
       let data = req.body;
+
       if(data){
         res.status(200).json({
             status :  true,
